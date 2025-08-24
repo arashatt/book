@@ -1,3 +1,6 @@
+#import "/templates/ebook.typ"
+#show: ebook.project.with(title: "typst-book", spec: "book.typ")
+
 Hi, I’m Arash Attari 👋
 
 This is where I share pieces of my journey—sometimes technical, sometimes personal, often a mix of both.
