@@ -1,9 +1,9 @@
+#import "/book.typ": book-page
+#show: book-page.with(title: "Hello, typst")
 #import "@preview/frame-it:1.2.0": *
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.1": *
 #import "@preview/showybox:2.0.4": showybox
-#import "/templates/ebook.typ"
-#show: ebook.project.with(title: "typst-book", spec: "book.typ")
 
 #show: codly-init.with()
 

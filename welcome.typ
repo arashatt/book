@@ -1,5 +1,3 @@
-#import "/templates/ebook.typ"
-#show: ebook.project.with(title: "typst-book", spec: "book.typ")
 
 Hi, I’m Arash Attari 👋
 
