@@ -75,9 +75,10 @@
 
   // remove margins for web target
   set page(
+    paper: "a3",
     margin: (
       // reserved beautiful top margin
-      top: 20pt,
+      top: 50pt,
       // reserved for our heading style.
       // If you apply a different heading style, you may remove it.
       left: 20pt,
