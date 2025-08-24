@@ -1,0 +1,27 @@
+{
+  // VS Code internal Node path for debugging and extensions
+  "node.path": "C:/Users/a.atari/Downloads/node-v22.18.0-win-x64/node-v22.18.0-win-x64/node.exe",
+
+  // Terminal profiles for Windows
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [
+        "/k",
+        "set PATH=C:/Users/a.atari/Downloads/node-v22.18.0-win-x64/node-v22.18.0-win-x64;%PATH%"
+      ],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}

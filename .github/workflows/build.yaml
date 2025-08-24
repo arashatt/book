@@ -1,0 +1,60 @@
+name: Build and Deploy
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache npm global packages
+        id: npm-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.config/npm
+            $(npm config get prefix)/lib
+            $(npm config get prefix)/bin
+          key: ${{ runner.os }}-npm-global-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-global-
+
+      # Only install if not found in cache
+      - name: Install Wrangler if missing
+        run: |
+          if ! command -v wrangler >/dev/null 2>&1; then
+            echo "Wrangler not found, installing..."
+            npm install -g wrangler@4.32.0
+          else
+            echo "Wrangler already cached ✅"
+          fi
+
+
+
+      # Cache Shiroa binary
+      - name: Cache Shiroa
+        id: cache-shiroa
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/.local/bin/shiroa
+          key: shiroa-cache-v0.3.1-rc3
+
+      # Install Shiroa only if cache miss
+      - name: Install Shiroa
+        if: steps.cache-shiroa.outputs.cache-hit != 'true'
+        run: |
+          curl -LsSf https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.3.1-rc3/shiroa-installer.sh | sh
+
+      # Build project
+      - name: Build
+        run: shiroa build
+
+      # Deploy with Wrangler
+      - name: Deploy with Wrangler
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: wrangler deploy
