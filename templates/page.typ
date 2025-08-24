@@ -82,6 +82,7 @@
       // reserved for our heading style.
       // If you apply a different heading style, you may remove it.
       left: 20pt,
+      right: 20pt
       // Typst is setting the page's bottom to the baseline of the last line of text. So bad :(.
       bottom: 0.5em,
       // remove rest margins.
