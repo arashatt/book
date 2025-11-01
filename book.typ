@@ -14,6 +14,7 @@
 	- #chapter("paper.typ")[Copied from accelerated-jacow]
 	- #chapter("javascript.typ")[JavaScript]
 	- #chapter("websocket.typ")[WebSocket]
+	- #chapter("testcontainers.typ")[testcontainers]
   ]
 )
 
