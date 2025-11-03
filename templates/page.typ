@@ -35,7 +35,7 @@
 
 // Fonts
 #let main-font = (
-  "Crimson text",
+  "Lora",
   "Source Han Serif SC",
   // "Source Han Serif TC",
   // shiroa's embedded font
