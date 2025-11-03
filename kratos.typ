@@ -4,7 +4,7 @@
 Kratos is an open source solution to handle user authentication: Register, Login being the obvious examples. To be able to use Kratos in our API, we should be familiar with the workflows of Kratos to properly use it as authentication management in our apps. There are some official examples that integrate Kratos in applications.
 
 = General Info
-Generally three environment variables are required to configure our api, That are:
+Generally, there are three environment variables required to configure our api, That are:
 #figure(
   [
 + `KRATOS_PUBLIC_URL`
@@ -45,4 +45,4 @@ as explained above, the expressjs app uses #link("https://github.com/ory/kratos-
 
 
 = Final Notes
-One questions that remains is how to store sessions when our application isn't being run in browser like CLI tools that require their users to authenticate.
+One question that remains is how to store sessions when our application isn't running in browser (e.g. CLI tools that require their users to authenticate).
