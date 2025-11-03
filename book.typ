@@ -15,6 +15,7 @@
 	- #chapter("javascript.typ")[JavaScript]
 	- #chapter("websocket.typ")[WebSocket]
 	- #chapter("testcontainers.typ")[testcontainers]
+	- #chapter("kratos.typ")[kratos]
   ]
 )
 
