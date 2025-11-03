@@ -1,7 +1,7 @@
 #import "/book.typ": book-page
 #show: book-page.with(title: "Hello, typst")
 
-Kratos is an opensource solution to handle user authentication: Register, Login being the obvious examples. To be able to use Kratos in our API, we should be familiar with the workflows of Kratos to properly use it as authentication management in our apps. There are some official examples that integrate Kratos in applications.
+Kratos is an open source solution to handle user authentication: Register, Login being the obvious examples. To be able to use Kratos in our API, we should be familiar with the workflows of Kratos to properly use it as authentication management in our apps. There are some official examples that integrate Kratos in applications.
 
 = General Info
 Generally three environment variables are required to configure our api, That are:
@@ -25,10 +25,10 @@ caption: [additional env configs for OAuth2 ])
 
 = Official Examples
 
-Please refer to #link("https://www.ory.com/docs/getting-started/overview")[link] to see these examples.
+Please refer to #link("https://www.ory.com/docs/getting-started/overview")[link] to see these examples. Let's explore some of these implementations.
 
 = #link("https://github.com/ory/kratos-selfservice-ui-node")[Express]
-from official Documentations of express #link("https://expressjs.com/en/guide/using-middleware.html")[middleware]s can:
+From the official Documentation of express #link("https://expressjs.com/en/guide/using-middleware.html")[middleware]s can:
 - Execute any code.
 - Make changes to the request and the response objects.
 - End the request-response cycle.
