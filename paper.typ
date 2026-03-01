@@ -8,7 +8,8 @@
  * Typst universe: https://typst.app/universe/package/accelerated-jacow
  * GitHub repository: https://github.com/eltos/accelerated-jacow
  */
-
+#import "/book.typ": book-page
+#show: book-page.with(title: "Hello, typst")
 #import "@preview/accelerated-jacow:0.1.4": jacow, jacow-table
 
 #show: jacow.with(
